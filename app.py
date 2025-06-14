@@ -17,7 +17,6 @@ st.write("""
 Website ini memprediksi tingkat obesitas berdasarkan data input yang diberikan oleh pengguna.
 """)
 
-
 # Membuat form input untuk pengguna
 st.header("Masukkan data pengguna di bawah ini:")
 
@@ -32,10 +31,10 @@ weight = st.number_input("Berat Badan (kg)", min_value=10, max_value=300, value=
 family_history_with_overweight = st.selectbox("Apakah ada riwayat keluarga dengan obesitas?", ["Yes", "No"])
 family_history_with_overweight = 1 if family_history_with_overweight == "Yes" else 0
 
-FAVC = st.selectbox("Apakah Anda sering konsumsi makanan tinggi kalori?", ["Yes", "No"])
+FAVC = st.selectbox("Apakah Anda sering mengonsumsi makanan tinggi kalori?", ["Yes", "No"])
 FAVC = 1 if FAVC == "Yes" else 0
 
-FCVC = st.number_input("Seberapa sering Anda makan sayuran?", min_value=1, max_value=5, value=3)
+FCVC = st.number_input("Seberapa sering Anda mengomsumsi sayuran?", min_value=1, max_value=5, value=3)
 NCP = st.number_input("Berapa kali Anda makan besar dalam sehari?", min_value=1, max_value=5, value=3)
 
 CAEC = st.selectbox("Apakah Anda sering makan camilan seperti kue, makanan manis, atau makanan cepat saji?", ["Yes", "No"])
@@ -44,12 +43,12 @@ CAEC = 1 if CAEC == "Yes" else 0
 SMOKE = st.selectbox("Apakah Anda merokok?", ["Yes", "No"])
 SMOKE = 1 if SMOKE == "Yes" else 0
 
-CH2O = st.number_input("Berapa konsumsi air yang Anda minum setiap hari (dalam liter)?", min_value=1.0, max_value=10.0, value=2.0)
-SCC = st.selectbox("Apakah anda mengikuti program pengendalian berat badan", ["Yes", "No"])
+CH2O = st.number_input("Berapa banyak air yang Anda minum setiap hari (dalam bentuk liter)?", min_value=1.0, max_value=10.0, value=2.0)
+SCC = st.selectbox("Apakah Anda memantau asupan kalori harian?", ["Yes", "No"])
 SCC = 1 if SCC == "Yes" else 0
 
 FAF = st.number_input("Seberapa sering Anda melakukan aktivitas fisik?", min_value=1, max_value=5, value=3)
-TUE = st.number_input("Berapa lama Anda menggunakan perangkat teknologi setiap hari (dalam jam)?", min_value=0, max_value=24, value=3)
+TUE = st.number_input("Berapa lama Anda menggunakan perangkat teknologi setiap hari (dalam bentuk jam)?", min_value=0, max_value=24, value=3)
 
 CALC = st.selectbox("Seberapa sering Anda mengonsumsi minuman alkohol?", ["Never", "Rarely", "Frequently", "Always"])
 CALC = {"Never": 0, "Rarely": 1, "Frequently": 2, "Always": 3}[CALC]
